@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Minecraft Paper, Velocity, web, Python, and Java developer portfolio for MD. Arman Raza Khan, also known as BrokenHearts.">
+    <title>BrokenHearts | Minecraft Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="world-bg" aria-hidden="true">
+        <div class="sun"></div>
+        <div class="cloud cloud-one"></div>
+        <div class="cloud cloud-two"></div>
+        <div class="floating-block block-a"></div>
+        <div class="floating-block block-b"></div>
+        <div class="floating-block block-c"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a class="logo" href="#home" aria-label="BrokenHearts home">
+                <span class="logo-cube"></span>
+                <span>BrokenHearts</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link-item">Home</a></li>
+                <li><a href="#about" class="nav-link-item">About</a></li>
+                <li><a href="#experience" class="nav-link-item">Experience</a></li>
+                <li><a href="#plugins" class="nav-link-item">Plugins</a></li>
+                <li><a href="#skills" class="nav-link-item">Skills</a></li>
+                <li><a href="#contact" class="nav-link-item">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Minecraft Paper, Velocity and backend developer</p>
+                    <h1>MD. Arman Raza Khan</h1>
+                    <p class="hero-tag">Known as <strong>BrokenHearts</strong></p>
+                    <p class="hero-subtitle">
+                        I build Minecraft server systems, proxy plugins, minigames, lifesteal cores,
+                        SkyBlock features, and fast websites. I have played Minecraft for 9 years
+                        and have been coding for 5 years.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#plugins" class="btn btn-primary">View Plugins</a>
+                        <a href="https://github.com/armanrazakhan/" class="btn btn-secondary" target="_blank" rel="noreferrer">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="hero-scene" aria-label="Minecraft style server build illustration">
+                    <div class="scene-window">
+                        <div class="server-panel">
+                            <div class="panel-top">
+                                <span class="status-dot"></span>
+                                <span>SERVER CONSOLE</span>
+                            </div>
+                            <div class="console-lines">
+                                <p>&gt; Loading Paper plugins...</p>
+                                <p>&gt; Velocity proxy online</p>
+                                <p>&gt; LifestealCore enabled</p>
+                                <p>&gt; SkyBlock ChocolateFactory ready</p>
+                            </div>
+                        </div>
+                        <div class="terrain">
+                            <span class="cube grass"></span>
+                            <span class="cube grass"></span>
+                            <span class="cube stone"></span>
+                            <span class="cube diamond"></span>
+                            <span class="cube dirt"></span>
+                            <span class="cube grass"></span>
+                            <span class="cube obsidian"></span>
+                            <span class="cube stone"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Player turned builder</p>
+                    <h2>About Me</h2>
+                </div>
+                <div class="about-layout">
+                    <div class="about-text">
+                        <p>
+                            I am an HTML, CSS, Python, and Java developer with strong experience in
+                            Minecraft Paper and Velocity plugin development. My main strength is building
+                            backend systems for Minecraft networks, from proxy logic to lobby cores,
+                            minigame systems, Lifesteal, SkyBlock features, Discord sync, ranks, and moderation.
+                        </p>
+                        <p>
+                            I have worked with LegitPixel, FinePixel, and WitherNetwork, and I am currently
+                            working as a freelancer for Minecraft server owners and creators.
+                        </p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">9+</span>
+                            <span class="stat-label">Years Playing Minecraft</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Years Coding</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">11</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section experience">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Network experience</p>
+                    <h2>Servers I Worked On</h2>
+                </div>
+                <div class="experience-grid">
+                    <article class="server-card">
+                        <div class="server-icon grass-block"></div>
+                        <h3>LegitPixel</h3>
+                        <p>
+                            Created the proxy plugin solo, contributed to LobbyCore, fixed SkyBlock Core bugs,
+                            and implemented the SkyBlock Chocolate Factory feature.
+                        </p>
+                        <div class="tag-list">
+                            <span>Proxy</span>
+                            <span>LobbyCore</span>
+                            <span>SkyBlock</span>
+                        </div>
+                    </article>
+                    <article class="server-card">
+                        <div class="server-icon diamond-block"></div>
+                        <h3>FinePixel</h3>
+                        <p>
+                            Worked across the network from proxy to minigames, handled backend systems solo,
+                            created websites, and made a major contribution to SkyBlock.
+                        </p>
+                        <div class="tag-list">
+                            <span>Core</span>
+                            <span>The Pit</span>
+                            <span>BedWars</span>
+                        </div>
+                    </article>
+                    <article class="server-card">
+                        <div class="server-icon redstone-block"></div>
+                        <h3>WitherNetwork</h3>
+                        <p>
+                            Created the Lifesteal core solo, focusing on server gameplay logic and stable
+                            backend behavior for a competitive Minecraft experience.
+                        </p>
+                        <div class="tag-list">
+                            <span>Lifesteal</span>
+                            <span>Core</span>
+                            <span>Java</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="plugins" class="section plugins">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Plugin chest</p>
+                    <h2>Minecraft Plugins I Have Made</h2>
+                </div>
+                <div class="plugin-grid">
+                    <article class="plugin-card">
+                        <h3>LegitPixel Proxy</h3>
+                        <p>Solo proxy plugin for network routing and backend control.</p>
+                    </article>
+                    <article class="plugin-card">
+                        <h3>LegitPixel Lobby</h3>
+                        <p>Contributed to LobbyCore systems and helped improve player flow.</p>
+                    </article>
+                    <article class="plugin-card">
+                        <h3>LegitPixel SkyBlock</h3>
+                        <p>Fixed bugs and implemented the Chocolate Factory feature.</p>
+                    </article>
+                    <article class="plugin-card">
+                        <h3>Discord Sync</h3>
+                        <p>Created a paid customer plugin for Bharat to sync Discord and Minecraft.</p>
+                    </article>
+                    <article class="plugin-card">
+                        <h3>Velocity Rank Plugin</h3>
+                        <p>Built a rank plugin for Bharat using Velocity network logic.</p>
+                    </article>
+                    <article class="plugin-card">
+                        <h3>Moderation Plugin</h3>
+                        <p>Created a moderation plugin for the YouTuber GGS Gaming.</p>
+                    </article>
+                    <article class="plugin-card">
+                        <h3>FinePixel Core</h3>
+                        <p>Made the backend core for FinePixel systems.</p>
+                    </article>
+                    <article class="plugin-card">
+                        <h3>FinePixel The Pit</h3>
+                        <p>Built the server-side logic for The Pit gameplay.</p>
+                    </article>
+                    <article class="plugin-card">
+                        <h3>FinePixel BedWars</h3>
+                        <p>Created BedWars backend systems and game handling.</p>
+                    </article>
+                    <article class="plugin-card">
+                        <h3>FinePixel SkyBlock</h3>
+                        <p>Helped heavily with SkyBlock Core development and improvements.</p>
+                    </article>
+                    <article class="plugin-card">
+                        <h3>FinePixel Lobby Core</h3>
+                        <p>Made the lobby core for FinePixel player entry and network experience.</p>
+                    </article>
+                    <article class="plugin-card featured-plugin">
+                        <h3>LegitPixel Website</h3>
+                        <p>Created the LegitPixel website in under 1 hour.</p>
+                        <a href="https://armanrazakhan.github.io/" target="_blank" rel="noreferrer">Open Website</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Toolbelt</p>
+                    <h2>Skills</h2>
+                </div>
+                <div class="skills-grid">
+                    <article class="skill-category">
+                        <h3>Languages</h3>
+                        <div class="skill-row"><span>Java</span><strong>Paper / Velocity</strong></div>
+                        <div class="skill-row"><span>Python</span><strong>Automation</strong></div>
+                        <div class="skill-row"><span>HTML</span><strong>Websites</strong></div>
+                        <div class="skill-row"><span>CSS</span><strong>Responsive UI</strong></div>
+                    </article>
+                    <article class="skill-category">
+                        <h3>Minecraft Development</h3>
+                        <div class="skill-row"><span>Paper Plugins</span><strong>Expert</strong></div>
+                        <div class="skill-row"><span>Velocity Proxy</span><strong>Expert</strong></div>
+                        <div class="skill-row"><span>Minigames</span><strong>Backend</strong></div>
+                        <div class="skill-row"><span>SkyBlock</span><strong>Core Features</strong></div>
+                    </article>
+                    <article class="skill-category">
+                        <h3>Freelance Builds</h3>
+                        <div class="skill-row"><span>Discord Sync</span><strong>Custom</strong></div>
+                        <div class="skill-row"><span>Ranks</span><strong>Velocity</strong></div>
+                        <div class="skill-row"><span>Moderation</span><strong>Tools</strong></div>
+                        <div class="skill-row"><span>Websites</span><strong>Fast Delivery</strong></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="container contact-grid">
+                <div>
+                    <p class="eyebrow">Open for freelance</p>
+                    <h2>Need a Minecraft plugin or server backend?</h2>
+                    <p>
+                        Message me for Paper plugins, Velocity proxy systems, minigames, SkyBlock work,
+                        Lifesteal cores, ranks, Discord sync, moderation tools, and Minecraft websites.
+                    </p>
+                </div>
+                <div class="contact-links">
+                    <a class="contact-card" href="https://github.com/armanrazakhan/" target="_blank" rel="noreferrer">
+                        <span>GitHub</span>
+                        <strong>github.com/armanrazakhan</strong>
+                    </a>
+                    <a class="contact-card" href="https://www.instagram.com/armanrazakhan/" target="_blank" rel="noreferrer">
+                        <span>Instagram</span>
+                        <strong>@armanrazakhan</strong>
+                    </a>
+                    <button class="contact-card copy-discord" type="button" data-copy="armanrazakhan">
+                        <span>Discord</span>
+                        <strong>armanrazakhan</strong>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>BrokenHearts | MD. Arman Raza Khan</p>
+            <p>Java, Paper, Velocity, Python, HTML and CSS developer.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
