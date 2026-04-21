@@ -23,17 +23,27 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 });
 
 const sections = document.querySelectorAll("main section[id]");
-const navItems = document.querySelectorAll(".nav-link-item");
+const navItems = document.querySelectorAll('.nav-link-item[href^="#"]');
 
 const setActiveLink = () => {
-    let current = "home";
+    if (!sections.length || !navItems.length) {
+        return;
+    }
+
+    let current = sections[0].id;
+    const activationLine = window.innerHeight * 0.38;
 
     sections.forEach((section) => {
-        const top = section.offsetTop - 120;
-        if (window.scrollY >= top) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= activationLine && rect.bottom > 90) {
             current = section.id;
         }
     });
+
+    const isAtPageBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+    if (isAtPageBottom) {
+        current = sections[sections.length - 1].id;
+    }
 
     navItems.forEach((item) => {
         item.classList.toggle("active", item.getAttribute("href") === `#${current}`);
