@@ -298,7 +298,9 @@ a {
 .server-panel {
     position: relative;
     z-index: 2;
-    background: rgba(12, 16, 24, 0.9);
+    background:
+        linear-gradient(180deg, rgba(16, 22, 33, 0.96), rgba(8, 12, 19, 0.96)),
+        repeating-linear-gradient(0deg, transparent 0 28px, rgba(80, 227, 210, 0.04) 28px 29px);
     border: 5px solid var(--border);
     box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.35);
     overflow: hidden;
@@ -307,6 +309,7 @@ a {
 .panel-top {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 10px;
     padding: 12px 14px;
     background: var(--stone);
@@ -314,22 +317,104 @@ a {
     font-weight: 900;
 }
 
+.panel-top div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.panel-top strong {
+    padding: 4px 7px;
+    color: var(--ink);
+    background: var(--grass);
+    border: 3px solid var(--border);
+    font-size: 0.72rem;
+    line-height: 1;
+}
+
 .status-dot {
     width: 14px;
     height: 14px;
     background: var(--grass);
     border: 3px solid var(--border);
+    box-shadow: 0 0 18px rgba(95, 189, 63, 0.75);
+    animation: statusPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+    50% {
+        transform: scale(1.18);
+        box-shadow: 0 0 26px rgba(95, 189, 63, 0.95);
+    }
+}
+
+.console-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 14px;
+    border-bottom: 4px solid var(--border);
+}
+
+.console-stats div {
+    padding: 10px;
+    background: rgba(48, 57, 71, 0.72);
+    border: 3px solid var(--border);
+}
+
+.console-stats span {
+    display: block;
+    color: var(--muted);
+    font-size: 0.74rem;
+    font-weight: 900;
+}
+
+.console-stats strong {
+    display: block;
+    margin-top: 2px;
+    color: var(--gold);
+    font-size: 0.88rem;
+    line-height: 1.1;
 }
 
 .console-lines {
-    padding: 18px;
+    padding: 16px 18px;
     color: #b7ff9a;
     font-family: Consolas, "Courier New", monospace;
     font-size: 0.92rem;
 }
 
+.console-lines p {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    min-height: 28px;
+    white-space: nowrap;
+}
+
 .console-lines p + p {
-    margin-top: 10px;
+    margin-top: 7px;
+}
+
+.console-lines span {
+    color: var(--diamond);
+    font-weight: 900;
+}
+
+.console-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 18px 18px;
+}
+
+.console-stack span {
+    padding: 6px 8px;
+    color: var(--ink);
+    background: var(--diamond);
+    border: 3px solid var(--border);
+    font-size: 0.76rem;
+    font-weight: 900;
 }
 
 .terrain {
@@ -753,6 +838,20 @@ button.contact-card {
 
     .console-lines {
         font-size: 0.78rem;
+    }
+
+    .panel-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .console-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .console-lines p {
+        align-items: flex-start;
+        white-space: normal;
     }
 }
 
