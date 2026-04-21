@@ -1,4 +1,4 @@
-const menuToggle = document.querySelector(".menu-toggle");
+﻿const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
 if (menuToggle && navLinks) {
@@ -44,7 +44,7 @@ window.addEventListener("scroll", setActiveLink, { passive: true });
 setActiveLink();
 
 const revealItems = document.querySelectorAll(
-    ".stat-card, .server-card, .plugin-card, .skill-category, .contact-card"
+    ".stat-card, .server-card, .plugin-card, .public-card, .skill-category, .contact-card"
 );
 
 if ("IntersectionObserver" in window) {
@@ -88,3 +88,4 @@ if (copyDiscord) {
         }, 1800);
     });
 }
+
