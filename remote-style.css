@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
 
 :root {
     --sky: #89d2ff;
@@ -80,7 +80,7 @@ a {
     background:
         linear-gradient(180deg, rgba(5, 10, 18, 0.2), rgba(5, 10, 18, 0.84)),
         linear-gradient(90deg, rgba(4, 11, 19, 0.78), rgba(4, 11, 19, 0.3) 42%, rgba(4, 11, 19, 0.8)),
-        url("assets/portfolio-network-bg.png?v=20260425a") center top / cover no-repeat;
+        url("assets/portfolio-network-bg.png") center top / cover no-repeat;
 }
 
 .world-bg::before,
@@ -499,7 +499,7 @@ a {
 .scene-art {
     background:
         linear-gradient(180deg, rgba(4, 9, 16, 0.28), rgba(4, 9, 16, 0.86)),
-        url("assets/portfolio-network-bg.png?v=20260425a") center / cover no-repeat;
+        url("assets/portfolio-network-bg.png") center / cover no-repeat;
     opacity: 0.84;
     transform: scale(1.01);
 }
@@ -1236,3 +1236,4 @@ button.contact-card {
         align-items: stretch;
     }
 }
+
