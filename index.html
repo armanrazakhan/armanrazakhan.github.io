@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Minecraft Paper, Velocity, web, Python, and Java developer portfolio for MD. Arman Raza Khan, also known as BrokenHearts, featuring network experience and public projects.">
     <title>BrokenHearts | Minecraft Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css?v=20260425a">
+    <link rel="stylesheet" href="style.css?v=20260501e">
 </head>
 <body>
     <div class="world-bg" aria-hidden="true">
@@ -20,7 +20,9 @@
     <nav class="navbar">
         <div class="container nav-inner">
             <a class="logo" href="#home" aria-label="BrokenHearts home">
-                <span class="logo-cube"></span>
+                <span class="logo-avatar-wrap">
+                    <img class="logo-avatar" src="assets/profile-pfp.png?v=20260501e" alt="BrokenHearts profile picture">
+                </span>
                 <span>BrokenHearts</span>
             </a>
             <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
@@ -41,6 +43,16 @@
     </nav>
 
     <main>
+        <section class="release-banner-section">
+            <div class="container">
+                <a class="release-banner" href="https://builtbybit.com/resources/skyfortune.105034/" target="_blank" rel="noreferrer" aria-label="SkyFortune is now released on BuiltByBit">
+                    <span class="release-badge">Just Released</span>
+                    <strong>SkyFortune v1.0 is now live on BuiltByBit</strong>
+                    <span class="release-meta">$9.99 • Published Apr 28, 2026 • Open Resource</span>
+                </a>
+            </div>
+        </section>
+
         <section id="home" class="hero">
             <div class="container hero-grid">
                 <div class="hero-copy">
@@ -168,23 +180,60 @@
             <div class="container">
                 <div class="section-header">
                     <p class="eyebrow">What I build</p>
-                    <h2>Production-ready systems for Minecraft networks</h2>
+                    <h2>Freelance Development Services For Servers, Websites, And Custom Projects</h2>
+                </div>
+                <div class="services-intro">
+                    <p>I work as a freelance developer for server owners, creators, and clients who need reliable Java, JavaScript, Python, HTML, and CSS work delivered in a practical way. My strongest area is Minecraft backend development, but I also build websites, automation tools, apps, and custom Java projects.</p>
+                    <div class="services-pills">
+                        <span>Java projects</span>
+                        <span>JavaScript apps</span>
+                        <span>Python automation</span>
+                        <span>HTML / CSS websites</span>
+                        <span>Minecraft backend systems</span>
+                    </div>
                 </div>
                 <div class="services-grid">
                     <article class="service-card">
                         <span class="service-step">01</span>
-                        <h3>Core Network Systems</h3>
-                        <p>Velocity routing, player flow, permissions, ranks, sync logic, and the backend pieces that hold a network together.</p>
+                        <h3>Minecraft Backend Development</h3>
+                        <p>Velocity routing, permissions, ranks, sync logic, staff systems, and the backend architecture that holds a Minecraft network together.</p>
+                        <div class="service-tags">
+                            <span>Java</span>
+                            <span>Velocity</span>
+                            <span>Paper</span>
+                        </div>
                     </article>
                     <article class="service-card">
                         <span class="service-step">02</span>
-                        <h3>Gameplay And Progression</h3>
-                        <p>Minigames, Lifesteal, SkyBlock systems, custom features, and server mechanics designed for stable live gameplay.</p>
+                        <h3>Websites And Client Platforms</h3>
+                        <p>Responsive websites, landing pages, portfolio sites, dashboards, and web experiences built with HTML, CSS, and JavaScript for brands and communities.</p>
+                        <div class="service-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
                     </article>
                     <article class="service-card">
                         <span class="service-step">03</span>
-                        <h3>Tools Around The Server</h3>
-                        <p>Discord sync, moderation tooling, automation, internal utilities, and websites that support the full creator experience.</p>
+                        <h3>Apps, Tools, And Custom Builds</h3>
+                        <p>Python automation, Java applications, Discord sync, moderation tools, internal utilities, and custom software built around what the client actually needs.</p>
+                        <div class="service-tags">
+                            <span>Python</span>
+                            <span>Apps</span>
+                            <span>Automation</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="services-support-grid">
+                    <article class="services-support-card">
+                        <span class="summary-kicker">Best Fit</span>
+                        <h3>Clients who want direct communication and clean delivery</h3>
+                        <p>I’m a strong fit for people who want someone to take a project seriously, move quickly, and ship something polished without unnecessary complexity.</p>
+                    </article>
+                    <article class="services-support-card">
+                        <span class="summary-kicker">Freelance Focus</span>
+                        <h3>From one-off fixes to full project builds</h3>
+                        <p>I can help with complete builds, upgrades, bug fixes, feature work, websites, backend systems, and support tools depending on what your project needs.</p>
                     </article>
                 </div>
             </div>
@@ -196,9 +245,19 @@
                     <p class="eyebrow">Network experience</p>
                     <h2>Servers I Worked On</h2>
                 </div>
+                <div class="experience-intro">
+                    <p>I’ve worked across private network builds, freelance delivery, and public-facing systems, usually owning the backend work that keeps player flow, gameplay logic, and staff tools stable in production.</p>
+                    <div class="experience-proofbar">
+                        <span>Proxy and backend systems</span>
+                        <span>Solo freelance delivery</span>
+                        <span>Production-ready gameplay features</span>
+                        <span>Public and client releases</span>
+                    </div>
+                </div>
                 <div class="experience-grid">
                     <article class="server-card">
                         <div class="server-icon grass-block"></div>
+                        <span class="server-role">Proxy And SkyBlock Work</span>
                         <h3>LegitPixel</h3>
                         <p>
                             Created the proxy system solo, contributed to LobbyCore, fixed SkyBlock Core bugs,
@@ -217,6 +276,7 @@
                     </article>
                     <article class="server-card">
                         <div class="server-icon diamond-block"></div>
+                        <span class="server-role">Network Systems And Website</span>
                         <h3>FinePixel</h3>
                         <p>
                             Worked across the network from proxy to minigames, handled backend systems solo,
@@ -235,6 +295,7 @@
                     </article>
                     <article class="server-card">
                         <div class="server-icon redstone-block"></div>
+                        <span class="server-role">Solo Lifesteal Core</span>
                         <h3>WitherNetwork</h3>
                         <p>
                             Created the Lifesteal core solo, focusing on server gameplay logic and stable
@@ -250,6 +311,18 @@
                             <li>Focused on reliable backend behavior and balance systems</li>
                             <li>Delivered a full solo core tailored to the network</li>
                         </ul>
+                    </article>
+                </div>
+                <div class="experience-summary-grid">
+                    <article class="experience-summary-card">
+                        <span class="summary-kicker">What I usually own</span>
+                        <h3>Backend responsibility from setup to polish</h3>
+                        <p>My work usually covers the technical layer that owners need most: proxy logic, permissions, ranks, gameplay systems, fixes, admin support, and launch-ready polish.</p>
+                    </article>
+                    <article class="experience-summary-card">
+                        <span class="summary-kicker">Why clients hire me</span>
+                        <h3>Clear solo execution without messy handoff problems</h3>
+                        <p>I’m usually brought in when a network needs someone who can take ownership, build cleanly, and deliver stable results without overcomplicating the workflow.</p>
                     </article>
                 </div>
                 <div class="experience-highlights">
@@ -300,10 +373,11 @@
                         <h3>DiscordSync</h3>
                         <p>A public resource built to sync Minecraft ranks and server activity with Discord communities.</p>
                     </a>
-                    <a class="public-card premium-card" href="https://builtbybit.com/members/brokenhearts696.789879/" target="_blank" rel="noreferrer">
-                        <span class="project-status premium">Paid</span>
+                    <a class="public-card premium-card release-card" href="https://builtbybit.com/resources/skyfortune.105034/" target="_blank" rel="noreferrer">
+                        <span class="project-status released">Released</span>
                         <h3>SkyFortune</h3>
-                        <p>A paid project focused on polished custom gameplay and premium server-side systems for Minecraft networks.</p>
+                        <p>Now live on BuiltByBit as a premium Sky Pillars setup built for servers that want polished gameplay for larger player bases.</p>
+                        <span class="project-meta">v1.0 • $9.99 • Published Apr 28, 2026</span>
                     </a>
                     <a class="public-card upcoming-card" href="https://builtbybit.com/members/brokenhearts696.789879/" target="_blank" rel="noreferrer">
                         <span class="project-status upcoming">Upcoming</span>
@@ -317,29 +391,116 @@
             <div class="container">
                 <div class="section-header">
                     <p class="eyebrow">Toolbelt</p>
-                    <h2>Skills</h2>
+                    <h2>Skills And Delivery Strengths</h2>
+                </div>
+                <div class="skills-intro">
+                    <p>I focus on the parts that matter most for live Minecraft servers: stable backend systems, clear gameplay logic, practical support tooling, and fast client-friendly delivery.</p>
+                    <div class="skills-pills">
+                        <span>Backend-first</span>
+                        <span>Freelance-ready</span>
+                        <span>Production-focused</span>
+                        <span>Fast communication</span>
+                    </div>
                 </div>
                 <div class="skills-grid">
                     <article class="skill-category">
-                        <h3>Languages</h3>
-                        <div class="skill-row"><span>Java</span><strong>Paper / Velocity</strong></div>
-                        <div class="skill-row"><span>Python</span><strong>Automation</strong></div>
-                        <div class="skill-row"><span>HTML</span><strong>Websites</strong></div>
-                        <div class="skill-row"><span>CSS</span><strong>Responsive UI</strong></div>
+                        <div class="skill-head">
+                            <h3>Core Stack</h3>
+                            <span class="skill-level expert">Expert</span>
+                        </div>
+                        <p class="skill-copy">The main tools I rely on to build Minecraft server systems, connected tooling, and fast web support.</p>
+                        <div class="skill-row">
+                            <span>Java</span>
+                            <strong>Paper / Velocity development</strong>
+                        </div>
+                        <div class="skill-meter"><span style="width: 96%"></span></div>
+                        <div class="skill-row">
+                            <span>Python</span>
+                            <strong>Automation and utility tooling</strong>
+                        </div>
+                        <div class="skill-meter"><span style="width: 84%"></span></div>
+                        <div class="skill-row">
+                            <span>HTML / CSS</span>
+                            <strong>Responsive portfolio and client sites</strong>
+                        </div>
+                        <div class="skill-meter"><span style="width: 82%"></span></div>
+                        <div class="skill-row">
+                            <span>JavaScript</span>
+                            <strong>Interactive websites and web app behavior</strong>
+                        </div>
+                        <div class="skill-meter"><span style="width: 80%"></span></div>
+                        <div class="skill-notes">
+                            <span>Java architecture</span>
+                            <span>JavaScript frontend</span>
+                            <span>Utility scripting</span>
+                            <span>Frontend support</span>
+                        </div>
                     </article>
                     <article class="skill-category">
-                        <h3>Minecraft Development</h3>
-                        <div class="skill-row"><span>Paper Systems</span><strong>Expert</strong></div>
-                        <div class="skill-row"><span>Velocity Proxy</span><strong>Expert</strong></div>
-                        <div class="skill-row"><span>Minigames</span><strong>Backend</strong></div>
-                        <div class="skill-row"><span>SkyBlock</span><strong>Core Features</strong></div>
+                        <div class="skill-head">
+                            <h3>Minecraft Systems</h3>
+                            <span class="skill-level specialist">Specialist</span>
+                        </div>
+                        <p class="skill-copy">I build server-side systems that feel stable in production and polished for actual players and staff.</p>
+                        <div class="skill-row">
+                            <span>Velocity Proxy</span>
+                            <strong>Routing, sync, ranks, permissions</strong>
+                        </div>
+                        <div class="skill-meter"><span style="width: 94%"></span></div>
+                        <div class="skill-row">
+                            <span>Paper Systems</span>
+                            <strong>Gameplay logic, cores, custom features</strong>
+                        </div>
+                        <div class="skill-meter"><span style="width: 95%"></span></div>
+                        <div class="skill-row">
+                            <span>Minigames / SkyBlock</span>
+                            <strong>Progression, events, balance systems</strong>
+                        </div>
+                        <div class="skill-meter"><span style="width: 88%"></span></div>
+                        <div class="skill-notes">
+                            <span>Proxy sync</span>
+                            <span>Game mechanics</span>
+                            <span>Staff experience</span>
+                        </div>
                     </article>
                     <article class="skill-category">
-                        <h3>Freelance Builds</h3>
-                        <div class="skill-row"><span>Discord Sync</span><strong>Custom</strong></div>
-                        <div class="skill-row"><span>Ranks</span><strong>Velocity</strong></div>
-                        <div class="skill-row"><span>Moderation</span><strong>Tools</strong></div>
-                        <div class="skill-row"><span>Websites</span><strong>Fast Delivery</strong></div>
+                        <div class="skill-head">
+                            <h3>Client Delivery</h3>
+                            <span class="skill-level strong">Strong</span>
+                        </div>
+                        <p class="skill-copy">Beyond code, I help server owners ship a complete setup with the support systems around the main backend.</p>
+                        <div class="skill-row">
+                            <span>Discord Sync</span>
+                            <strong>Custom rank and activity bridges</strong>
+                        </div>
+                        <div class="skill-meter"><span style="width: 86%"></span></div>
+                        <div class="skill-row">
+                            <span>Moderation Tools</span>
+                            <strong>Staff flows, admin support, utilities</strong>
+                        </div>
+                        <div class="skill-meter"><span style="width: 83%"></span></div>
+                        <div class="skill-row">
+                            <span>Web And Branding</span>
+                            <strong>Fast sites for creators and servers</strong>
+                        </div>
+                        <div class="skill-meter"><span style="width: 80%"></span></div>
+                        <div class="skill-notes">
+                            <span>Fast turnarounds</span>
+                            <span>Owner-friendly workflow</span>
+                            <span>Launch polish</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="skills-support-grid">
+                    <article class="skills-support-card">
+                        <span class="summary-kicker">Best At</span>
+                        <h3>Turning rough server ideas into stable systems</h3>
+                        <p>I’m strongest when there’s a clear gameplay vision but the backend, sync, tools, or production polish still need to be built properly.</p>
+                    </article>
+                    <article class="skills-support-card">
+                        <span class="summary-kicker">Working Style</span>
+                        <h3>Practical, direct, and focused on delivery</h3>
+                        <p>I prioritize reliable builds, straightforward communication, and solutions that actually help a server owner launch or improve their network.</p>
                     </article>
                 </div>
             </div>
@@ -362,6 +523,18 @@
                     </div>
                 </div>
                 <div class="contact-links">
+                    <a class="contact-card" href="https://www.linkedin.com/in/arman-khan-7b21a3342" target="_blank" rel="noreferrer">
+                        <span>LinkedIn</span>
+                        <strong>arman-khan-7b21a3342</strong>
+                    </a>
+                    <a class="contact-card" href="https://www.freelancer.in/u/ArmanKhanDev" target="_blank" rel="noreferrer">
+                        <span>Freelancer</span>
+                        <strong>freelancer.in/u/ArmanKhanDev</strong>
+                    </a>
+                    <a class="contact-card" href="https://www.fiverr.com/frizegamingzone" target="_blank" rel="noreferrer">
+                        <span>Fiverr</span>
+                        <strong>@frizegamingzone</strong>
+                    </a>
                     <a class="contact-card" href="https://github.com/armanrazakhan/" target="_blank" rel="noreferrer">
                         <span>GitHub</span>
                         <strong>github.com/armanrazakhan</strong>
@@ -382,11 +555,11 @@
     <footer class="footer">
         <div class="container footer-inner">
             <p>BrokenHearts | MD. Arman Raza Khan</p>
-            <p>Java, Paper, Velocity, Python, HTML and CSS developer.</p>
+            <p>Java, JavaScript, Python, HTML, CSS, Minecraft, website, and app developer.</p>
         </div>
     </footer>
 
-    <script src="script.js?v=20260425a"></script>
+    <script src="script.js?v=20260501e"></script>
 </body>
 </html>
 
