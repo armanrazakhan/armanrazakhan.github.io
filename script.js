@@ -2,6 +2,8 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 const sceneWindow = document.querySelector(".scene-window");
 const counters = document.querySelectorAll(".counter");
+const musicVideoId = "BqPgeWf8vNM";
+const toggleButtons = document.querySelectorAll("[data-toggle-target]");
 
 if (menuToggle && navLinks) {
     menuToggle.addEventListener("click", () => {
@@ -156,4 +158,131 @@ if (sceneWindow) {
     });
 
     sceneWindow.addEventListener("mouseleave", resetScene);
+}
+
+toggleButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const targetId = button.dataset.toggleTarget;
+        const panel = document.getElementById(targetId);
+        if (!panel) {
+            return;
+        }
+
+        const collapsed = panel.classList.toggle("is-collapsed");
+        const expanded = !collapsed;
+        button.setAttribute("aria-expanded", String(expanded));
+
+        const buttonText = expanded ? "Hide Features" : "Show Features";
+        button.textContent = buttonText;
+    });
+});
+
+const ensureMusicShell = () => {
+    let shell = document.querySelector(".music-shell");
+    if (shell) {
+        return shell;
+    }
+
+    shell = document.createElement("div");
+    shell.className = "music-shell";
+    shell.innerHTML = `
+        <button class="music-toggle" type="button" aria-pressed="false">
+            <span class="music-dot"></span>
+            <span class="music-label">Music Off</span>
+        </button>
+        <div id="yt-music-player" class="yt-music-player" aria-hidden="true"></div>
+    `;
+    document.body.append(shell);
+    return shell;
+};
+
+const musicShell = ensureMusicShell();
+const musicToggle = musicShell.querySelector(".music-toggle");
+const musicLabel = musicShell.querySelector(".music-label");
+let musicPlayer;
+let playerReady = false;
+let wantsMusic = window.localStorage.getItem("site_music_enabled") !== "false";
+
+const syncMusicUi = (enabled) => {
+    musicToggle?.setAttribute("aria-pressed", String(enabled));
+    if (musicLabel) {
+        musicLabel.textContent = enabled ? "Music On" : "Music Off";
+    }
+};
+
+syncMusicUi(wantsMusic);
+
+const applyLowVolumePlayback = () => {
+    if (!playerReady || !musicPlayer) {
+        return;
+    }
+
+    musicPlayer.setVolume(12);
+
+    if (wantsMusic) {
+        musicPlayer.playVideo();
+    } else {
+        musicPlayer.pauseVideo();
+    }
+};
+
+const loadYouTubeApi = () => {
+    if (window.YT?.Player) {
+        window.dispatchEvent(new Event("yt-ready-local"));
+        return;
+    }
+
+    if (document.querySelector('script[data-youtube-api="true"]')) {
+        return;
+    }
+
+    const script = document.createElement("script");
+    script.src = "https://www.youtube.com/iframe_api";
+    script.async = true;
+    script.dataset.youtubeApi = "true";
+    document.head.append(script);
+};
+
+window.onYouTubeIframeAPIReady = () => {
+    window.dispatchEvent(new Event("yt-ready-local"));
+};
+
+window.addEventListener("yt-ready-local", () => {
+    if (musicPlayer || !window.YT?.Player) {
+        return;
+    }
+
+    musicPlayer = new window.YT.Player("yt-music-player", {
+        videoId: musicVideoId,
+        playerVars: {
+            autoplay: 0,
+            controls: 0,
+            disablekb: 1,
+            fs: 0,
+            iv_load_policy: 3,
+            loop: 1,
+            modestbranding: 1,
+            playsinline: 1,
+            rel: 0,
+            playlist: musicVideoId
+        },
+        events: {
+            onReady: () => {
+                playerReady = true;
+                applyLowVolumePlayback();
+            }
+        }
+    });
+});
+
+musicToggle?.addEventListener("click", () => {
+    wantsMusic = !wantsMusic;
+    window.localStorage.setItem("site_music_enabled", String(wantsMusic));
+    syncMusicUi(wantsMusic);
+    loadYouTubeApi();
+    applyLowVolumePlayback();
+});
+
+if (wantsMusic) {
+    loadYouTubeApi();
 }
